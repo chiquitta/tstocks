@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="買入成交價"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/sellText"
@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="賣出成交價"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
         </TableRow>
 
@@ -46,7 +46,8 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="number"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/sell"
@@ -55,7 +56,8 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="number"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -68,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="買入股數(一張1000股)"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/sellNumText"
@@ -76,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="賣出股數(一張1000股)"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
         </TableRow>
 
@@ -91,7 +93,8 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="number"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/sellNum"
@@ -100,7 +103,8 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="number"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
         </TableRow>
 
@@ -114,7 +118,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="下單折扣"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/sFeeText"
@@ -122,7 +126,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="下單折扣"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
         </TableRow>
 
@@ -186,7 +190,8 @@
                 android:text="0"
                 android:textAlignment="viewEnd"
                 android:textSize="30sp"
-                android:typeface="monospace" />
+                android:typeface="monospace"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/sellPrice"
@@ -195,7 +200,8 @@
                 android:layout_weight="1"
                 android:text="0"
                 android:textAlignment="viewEnd"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -235,7 +241,8 @@
                 android:layout_weight="1"
                 android:text="0"
                 android:textAlignment="viewEnd"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/sFee"
@@ -244,7 +251,8 @@
                 android:layout_weight="1"
                 android:text="0"
                 android:textAlignment="viewEnd"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -284,7 +292,8 @@
                 android:layout_weight="1"
                 android:text="0"
                 android:textAlignment="textEnd"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/sellTotal"
@@ -293,7 +302,8 @@
                 android:layout_weight="1"
                 android:text="0"
                 android:textAlignment="textEnd"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:textStyle="bold" />
         </TableRow>
 
 

@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
         final EditText buyNum = (EditText)findViewById(R.id.buyNum);
         buyNum.setText("1000");
-
         final EditText sellNum = (EditText)findViewById(R.id.sellNum);
         sellNum.setText("1000");
 
