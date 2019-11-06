@@ -4,18 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f4f4f4"
     tools:context=".MainActivity">
 
     <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:shrinkColumns="0"
-        android:stretchColumns="1">
+        android:stretchColumns="1"
+        android:padding="10dp">
 
         <TableRow
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:weightSum="2" >
+            android:weightSum="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/titleText"
+                android:paddingBottom="30dp"
+                android:text="台股買賣獲利試算"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
 
             <TextView
                 android:id="@+id/buyText"
@@ -23,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="買入成交價"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/sellText"
@@ -31,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="賣出成交價"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
         </TableRow>
 
@@ -43,9 +63,14 @@
                 android:id="@+id/buy"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="2dp"
                 android:layout_weight="1"
+                android:background="#FFFFFF"
                 android:ems="10"
-                android:inputType="number"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -53,9 +78,14 @@
                 android:id="@+id/sell"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
                 android:layout_weight="1"
+                android:background="#FFFFFF"
                 android:ems="10"
-                android:inputType="number"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
                 android:textSize="30sp"
                 android:textStyle="bold" />
         </TableRow>
@@ -70,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="買入股數(一張1000股)"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/sellNumText"
@@ -78,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="賣出股數(一張1000股)"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
         </TableRow>
 
@@ -90,9 +120,14 @@
                 android:id="@+id/buyNum"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="2dp"
                 android:layout_weight="1"
+                android:background="#FFFFFF"
                 android:ems="10"
-                android:inputType="number"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -100,9 +135,14 @@
                 android:id="@+id/sellNum"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
                 android:layout_weight="1"
+                android:background="#FFFFFF"
                 android:ems="10"
-                android:inputType="number"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -118,7 +158,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="下單折扣"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/sFeeText"
@@ -126,7 +166,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="下單折扣"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
         </TableRow>
 
@@ -134,22 +174,32 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
 
-
-            <Spinner
-                android:id="@+id/buyFee"
+            <TextView
+                android:id="@+id/buyFeeF"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="32sp"
-                android:padding="5dip" />
+                android:ems="10"
+                android:inputType="number"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:onClick="onClick" />
+
+<!--            <Spinner-->
+<!--                android:id="@+id/buyFee"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:textSize="32sp"-->
+<!--                android:padding="5dip" />-->
 
             <Spinner
                 android:id="@+id/sellFee"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="32sp"
-                android:padding="5dip" />
+                android:textSize="32sp" />
         </TableRow>
 
         <TableRow
@@ -161,11 +211,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:paddingTop="20dp"
                 android:paddingBottom="10dp"
                 android:text="買入價格"
-                android:textAlignment="viewEnd"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/sellPriceText"
@@ -173,35 +221,61 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="賣出價格"
-                android:textAlignment="viewEnd"
-                android:textSize="18sp" />
+                android:textAlignment="textStart"
+                android:textSize="14sp" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
-
+            <TextView
+                android:id="@+id/dollarSign"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:fontFamily="@font/roboto_thin"
+                android:text="$"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
             <TextView
                 android:id="@+id/buyPrice"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0.9"
+                android:fontFamily="@font/roboto_thin"
                 android:text="0"
-                android:textAlignment="viewEnd"
-                android:textSize="30sp"
-                android:typeface="monospace"
-                android:textStyle="bold" />
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
 
+            <TextView
+                android:id="@+id/dollarSign"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:fontFamily="@font/roboto_thin"
+                android:text="$"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
             <TextView
                 android:id="@+id/sellPrice"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0.9"
+                android:fontFamily="@font/roboto_thin"
                 android:text="0"
-                android:textAlignment="viewEnd"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
         </TableRow>
 
         <TableRow
@@ -216,17 +290,25 @@
                 android:paddingTop="20dp"
                 android:paddingBottom="10dp"
                 android:text="買入手續費"
-                android:textAlignment="textEnd"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/sellFeeText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0.5"
                 android:text="賣出手續費"
-                android:textAlignment="textEnd"
-                android:textSize="18sp" />
+                android:textAlignment="textStart"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/sellTaxText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="證交稅"
+                android:textAlignment="center"
+                android:textSize="14sp" />
 
         </TableRow>
 
@@ -235,24 +317,77 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/dollarSign"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:fontFamily="@font/roboto_thin"
+                android:text="$"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+            <TextView
                 android:id="@+id/bFee"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0.9"
+                android:fontFamily="@font/roboto_thin"
                 android:text="0"
-                android:textAlignment="viewEnd"
+                android:textColor="@android:color/black"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:typeface="monospace" />
 
+            <TextView
+                android:id="@+id/dollarSign"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:fontFamily="@font/roboto_thin"
+                android:text="$"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
             <TextView
                 android:id="@+id/sFee"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0.4"
+                android:fontFamily="@font/roboto_thin"
                 android:text="0"
-                android:textAlignment="viewEnd"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:typeface="monospace" />
+
+            <TextView
+                android:id="@+id/dollarSign"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:fontFamily="@font/roboto_thin"
+                android:text="$"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+
+            <TextView
+                android:id="@+id/tax"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:fontFamily="@font/roboto_thin"
+                android:text="0"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
         </TableRow>
 
         <TableRow
@@ -267,8 +402,7 @@
                 android:paddingTop="20dp"
                 android:paddingBottom="10dp"
                 android:text="買入總價格"
-                android:textAlignment="textEnd"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/sellTotalText"
@@ -276,8 +410,83 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="賣出總價格"
-                android:textAlignment="textEnd"
-                android:textSize="18sp" />
+                android:textAlignment="textStart"
+                android:textSize="14sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/dollarSign"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:fontFamily="@font/roboto_thin"
+                android:text="$"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+            <TextView
+                android:id="@+id/buyTotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:fontFamily="@font/roboto_thin"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+            <TextView
+                android:id="@+id/dollarSign"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:fontFamily="@font/roboto_thin"
+                android:text="$"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+            <TextView
+                android:id="@+id/sellTotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:fontFamily="@font/roboto_thin"
+                android:text="0"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/profitText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:text="損益"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/profitPercentageText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="獲利率"
+                android:textAlignment="textStart"
+                android:textSize="14sp" />
 
         </TableRow>
 
@@ -286,24 +495,50 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/buyTotal"
+                android:id="@+id/dollarSign"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="0"
-                android:textAlignment="textEnd"
-                android:textSize="30sp"
-                android:textStyle="bold" />
-
+                android:layout_weight="0.1"
+                android:fontFamily="@font/roboto_thin"
+                android:text="$"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
             <TextView
-                android:id="@+id/sellTotal"
+                android:id="@+id/profit"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0.9"
+                android:fontFamily="@font/roboto_thin"
                 android:text="0"
-                android:textAlignment="textEnd"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textColor="@android:color/black"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+            <TextView
+                android:id="@+id/dollarSign"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:fontFamily="@font/roboto_thin"
+                android:text="$"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+            <TextView
+                android:id="@+id/profitPercentage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:fontFamily="@font/roboto_thin"
+                android:text="0"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
         </TableRow>
 
 
